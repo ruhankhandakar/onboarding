@@ -1,4 +1,4 @@
-import Input from "components/Common/Input";
+import StepOne from "./StepOne";
 
 import { Header } from "./styles";
 
@@ -9,7 +9,7 @@ const OnBoarding = () => {
         <img src="/logo192.png" alt="eden" />
         <h1>Eden</h1>
       </Header>
-      <Input id="full_name" labelText="Full Name" placeholder="John Doe" />
+      <StepOne />
     </>
   );
 };

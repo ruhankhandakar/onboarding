@@ -1,12 +1,16 @@
+import { ThemeProvider } from "styled-components";
+
 import OnBoarding from "components/Onboarding";
 
-import { Container } from "styles";
+import { Container, theme } from "styles";
 
 const App = () => {
   return (
-    <Container>
-      <OnBoarding />
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <OnBoarding />
+      </Container>
+    </ThemeProvider>
   );
 };
 
