@@ -1,4 +1,4 @@
-import OnBoarding from "components/onboarding";
+import OnBoarding from "components/Onboarding";
 
 import { Container } from "styles";
 
