@@ -1,5 +1,6 @@
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
+import StepThree from "./StepThree";
 
 import { Header } from "./styles";
 
@@ -11,7 +12,8 @@ const OnBoarding = () => {
         <h1>Eden</h1>
       </Header>
       {/* <StepOne /> */}
-      <StepTwo />
+      {/* <StepTwo /> */}
+      <StepThree />
     </>
   );
 };
