@@ -1,5 +1,13 @@
+import OnBoarding from "components/onboarding";
+
+import { Container } from "styles";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <Container>
+      <OnBoarding />
+    </Container>
+  );
 };
 
 export default App;
