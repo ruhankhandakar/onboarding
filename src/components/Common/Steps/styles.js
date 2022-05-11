@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StepOneContainer = styled.div`
+export const StepLayoutContainer = styled.div`
   header {
     margin-bottom: 1.9rem;
     text-align: center;

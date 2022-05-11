@@ -1,4 +1,5 @@
 import StepOne from "./StepOne";
+import StepTwo from "./StepTwo";
 
 import { Header } from "./styles";
 
@@ -9,7 +10,8 @@ const OnBoarding = () => {
         <img src="/logo192.png" alt="eden" />
         <h1>Eden</h1>
       </Header>
-      <StepOne />
+      {/* <StepOne /> */}
+      <StepTwo />
     </>
   );
 };

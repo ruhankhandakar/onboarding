@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const theme = {
   colors: {
     primary: "#664DE5",
+    optionalText: "rgba(0, 0, 0, 0.4)",
   },
 };
 

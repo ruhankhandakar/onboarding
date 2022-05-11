@@ -1,26 +1,29 @@
 import Input from "components/Common/Input";
 import Button from "components/Common/Button";
+
 import StepLayout from "components/Common/Steps/StepLayout";
 
-const StepOne = () => {
+const StepTwo = () => {
   return (
     <StepLayout
-      title="Welcome! First things first..."
-      paragraph="You can always change them later"
+      title="Let's set up a home for all your work"
+      paragraph="You can always create another workspace later"
     >
       <section>
         <Input
-          id="full_name"
-          labelText="Full Name"
-          placeholder="John Doe"
+          id="workspace_name"
+          labelText="Workspace Name"
+          placeholder="Eden"
           customStyle={{
             marginBottom: "1rem",
           }}
         />
         <Input
           id="display_name"
-          labelText="Display Name"
-          placeholder="John"
+          labelText="Workspace URL"
+          optionalLabelText="optional"
+          placeholder="Example"
+          prependText="www.eden.com/"
           customStyle={{
             marginBottom: "1.5rem",
           }}
@@ -31,4 +34,4 @@ const StepOne = () => {
   );
 };
 
-export default StepOne;
+export default StepTwo;
