@@ -17,6 +17,7 @@ const StepTwo = ({ handleSteps, inputProps, formData }) => {
           customStyle={{
             marginBottom: "1rem",
           }}
+          value={formData?.workspace_name || ""}
           {...inputProps}
         />
         <Input
@@ -28,6 +29,7 @@ const StepTwo = ({ handleSteps, inputProps, formData }) => {
           customStyle={{
             marginBottom: "1.5rem",
           }}
+          value={formData?.workspace_url || ""}
           {...inputProps}
         />
         <Button

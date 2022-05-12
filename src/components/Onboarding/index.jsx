@@ -29,7 +29,12 @@ const OnBoarding = () => {
 
   const handleSteps = (stepNumbers) => {
     if (stepNumbers.constructor.name === "Array") {
+      // From last step
       setActiveSteps([...stepNumbers]);
+      if (stepNumbers.length === 1 && stepNumbers[0] === 1) {
+        // Initial start case
+        setFormData({});
+      }
     } else {
       const nextStep = activeSteps.length + 1;
       setActiveSteps([...activeSteps, nextStep]);

@@ -16,6 +16,7 @@ const StepOne = ({ handleSteps, formData, inputProps }) => {
           customStyle={{
             marginBottom: "1rem",
           }}
+          value={formData?.full_name || ""}
           {...inputProps}
         />
         <Input
@@ -25,6 +26,7 @@ const StepOne = ({ handleSteps, formData, inputProps }) => {
           customStyle={{
             marginBottom: "1.5rem",
           }}
+          value={formData?.display_name || ""}
           {...inputProps}
         />
         <Button
