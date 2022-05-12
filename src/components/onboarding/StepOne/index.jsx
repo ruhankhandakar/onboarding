@@ -2,7 +2,7 @@ import Input from "components/Common/Input";
 import Button from "components/Common/Button";
 import StepLayout from "components/Common/Steps/StepLayout";
 
-const StepOne = () => {
+const StepOne = ({ handleSteps }) => {
   return (
     <StepLayout
       title="Welcome! First things first..."
@@ -25,7 +25,7 @@ const StepOne = () => {
             marginBottom: "1.5rem",
           }}
         />
-        <Button>Create Workspace</Button>
+        <Button onClick={handleSteps}>Create Workspace</Button>
       </section>
     </StepLayout>
   );
