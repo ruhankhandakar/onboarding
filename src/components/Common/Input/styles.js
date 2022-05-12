@@ -20,6 +20,7 @@ export const InputGroup = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 3px;
     outline: none;
+    width: 100%;
   }
 
   input::placeholder {
@@ -71,5 +72,11 @@ export const InputAddOnContainer = styled(InputGroup)`
   .field:last-child,
   .item:last-child {
     border-radius: 0 3px 3px 0;
+  }
+
+  @media (max-width: 480px) {
+    .item {
+      flex: 1;
+    }
   }
 `;
