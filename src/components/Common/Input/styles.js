@@ -9,6 +9,9 @@ export const InputGroup = styled.div`
     font-weight: 600;
     opacity: 0.6;
     padding-bottom: 10px;
+    @media (max-width: 480px) {
+      font-size: 0.8rem;
+    }
   }
 
   input {

@@ -7,11 +7,17 @@ export const StepLayoutContainer = styled.div`
     h2 {
       font-size: 1.6rem;
       margin-bottom: 0.6rem;
+      @media (max-width: 480px) {
+        font-size: 1.2rem;
+      }
     }
     p {
       font-size: 0.9rem;
       font-weight: 600;
       opacity: 0.4;
+      @media (max-width: 480px) {
+        font-size: 0.8rem;
+      }
     }
   }
 `;
@@ -43,6 +49,24 @@ export const StepNumbersContainer = styled.div`
       height: 2px;
       position: absolute;
       left: 100%;
+      @media (max-width: 1200px) {
+        width: 60%;
+      }
+      @media (max-width: 780px) {
+        width: 90%;
+      }
+      @media (max-width: 680px) {
+        width: 75%;
+      }
+      @media (max-width: 580px) {
+        width: 55%;
+      }
+      @media (max-width: 480px) {
+        width: 50%;
+      }
+      @media (max-width: 370px) {
+        width: 30%;
+      }
     }
     &:not(:first-child)::before {
       content: "";
@@ -51,6 +75,24 @@ export const StepNumbersContainer = styled.div`
       height: 2px;
       position: absolute;
       right: 100%;
+      @media (max-width: 1200px) {
+        width: 60%;
+      }
+      @media (max-width: 780px) {
+        width: 90%;
+      }
+      @media (max-width: 680px) {
+        width: 75%;
+      }
+      @media (max-width: 580px) {
+        width: 55%;
+      }
+      @media (max-width: 480px) {
+        width: 50%;
+      }
+      @media (max-width: 370px) {
+        width: 30%;
+      }
     }
 
     &.active {
