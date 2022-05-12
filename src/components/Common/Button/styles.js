@@ -10,4 +10,10 @@ export const CustomButton = styled.button`
   font-weight: 800;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.5s ease;
+  &:disabled {
+    background-color: ${({ theme }) => theme.colors.greyColor};
+    color: grey;
+    cursor: not-allowed;
+  }
 `;

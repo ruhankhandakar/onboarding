@@ -25,6 +25,7 @@ const RenderStepComponent = ({ currentStep, ...props }) => {
 
 const OnBoarding = () => {
   const [activeSteps, setActiveSteps] = useState([1]);
+  const [formData, setFormData] = useState({});
 
   const handleSteps = (stepNumbers) => {
     if (stepNumbers.constructor.name === "Array") {
@@ -33,6 +34,13 @@ const OnBoarding = () => {
       const nextStep = activeSteps.length + 1;
       setActiveSteps([...activeSteps, nextStep]);
     }
+  };
+
+  const handleChange = ({ target: { name, value } }) => {
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (
@@ -45,6 +53,10 @@ const OnBoarding = () => {
       <RenderStepComponent
         currentStep={activeSteps.length}
         handleSteps={handleSteps}
+        inputProps={{
+          onChange: handleChange,
+        }}
+        formData={formData}
       />
     </>
   );

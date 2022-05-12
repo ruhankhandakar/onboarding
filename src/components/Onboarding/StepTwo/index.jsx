@@ -3,7 +3,7 @@ import Button from "components/Common/Button";
 
 import StepLayout from "components/Common/Steps/StepLayout";
 
-const StepTwo = ({ handleSteps }) => {
+const StepTwo = ({ handleSteps, inputProps, formData }) => {
   return (
     <StepLayout
       title="Let's set up a home for all your work"
@@ -11,15 +11,16 @@ const StepTwo = ({ handleSteps }) => {
     >
       <section>
         <Input
-          id="workspace_name"
+          name="workspace_name"
           labelText="Workspace Name"
           placeholder="Eden"
           customStyle={{
             marginBottom: "1rem",
           }}
+          {...inputProps}
         />
         <Input
-          id="display_name"
+          name="workspace_url"
           labelText="Workspace URL"
           optionalLabelText="optional"
           placeholder="Example"
@@ -27,8 +28,14 @@ const StepTwo = ({ handleSteps }) => {
           customStyle={{
             marginBottom: "1.5rem",
           }}
+          {...inputProps}
         />
-        <Button onClick={handleSteps}>Create Workspace</Button>
+        <Button
+          onClick={handleSteps}
+          disabled={!formData?.workspace_name || !formData?.workspace_url}
+        >
+          Create Workspace
+        </Button>
       </section>
     </StepLayout>
   );

@@ -2,7 +2,7 @@ import Input from "components/Common/Input";
 import Button from "components/Common/Button";
 import StepLayout from "components/Common/Steps/StepLayout";
 
-const StepOne = ({ handleSteps }) => {
+const StepOne = ({ handleSteps, formData, inputProps }) => {
   return (
     <StepLayout
       title="Welcome! First things first..."
@@ -10,22 +10,29 @@ const StepOne = ({ handleSteps }) => {
     >
       <section>
         <Input
-          id="full_name"
+          name="full_name"
           labelText="Full Name"
           placeholder="John Doe"
           customStyle={{
             marginBottom: "1rem",
           }}
+          {...inputProps}
         />
         <Input
-          id="display_name"
+          name="display_name"
           labelText="Display Name"
           placeholder="John"
           customStyle={{
             marginBottom: "1.5rem",
           }}
+          {...inputProps}
         />
-        <Button onClick={handleSteps}>Create Workspace</Button>
+        <Button
+          onClick={handleSteps}
+          disabled={!formData?.full_name || !formData?.display_name}
+        >
+          Create Workspace
+        </Button>
       </section>
     </StepLayout>
   );

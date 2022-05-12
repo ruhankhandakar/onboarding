@@ -6,7 +6,10 @@ const StepNumbers = ({ totalSteps = 4, activeSteps = [1] }) => {
       {Array(totalSteps)
         .fill(1)
         .map((_, index) => (
-          <div className={`${activeSteps.includes(index + 1) ? "active" : ""}`}>
+          <div
+            key={index}
+            className={`${activeSteps.includes(index + 1) ? "active" : ""}`}
+          >
             {index + 1}
           </div>
         ))}
